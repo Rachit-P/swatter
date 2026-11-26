@@ -67,6 +67,12 @@ class AppScanner(private val context: Context) {
             else -> false
         }
 
+    /** Raw overlay op mode for another package, for test diagnostics. */
+    fun overlayModeForDebug(pkg: String): Int {
+        val uid = pm.getApplicationInfo(pkg, 0).uid
+        return opMode(AppOpsManager.OPSTR_SYSTEM_ALERT_WINDOW, uid, pkg)
+    }
+
     @Suppress("DEPRECATION")
     private fun opMode(op: String, uid: Int, pkg: String): Int = try {
         if (Build.VERSION.SDK_INT >= 29) {

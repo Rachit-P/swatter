@@ -54,7 +54,12 @@ class AppScannerTest {
     @Test
     fun flagsAnotherAppThatCanDrawOverlays() {
         val other = AppScanner(app).scan().single { it.packageName == testPkg }
-        assertTrue("overlay app-op should be visible for another package", other.canDrawOverlays)
+        assertTrue(
+            "overlay app-op should be visible for another package; " +
+                "scanner mode=${AppScanner(app).overlayModeForDebug(testPkg)}, " +
+                "shell says: ${shell("appops get $testPkg SYSTEM_ALERT_WINDOW").trim()}",
+            other.canDrawOverlays,
+        )
         assertFalse("test APK has no launcher icon", other.hasLauncherIcon)
 
         val ranked = Analyzer.rank(listOf(other), System.currentTimeMillis()).single()
