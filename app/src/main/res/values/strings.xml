@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Swatter</string>
+    <string name="cleanup_label">Swatter: fix my phone</string>
+    <string name="shortcut_summary">Find and remove the app that is showing pop-ups</string>
+    <string name="shortcut_description">Hold both volume buttons for 3 seconds to see which apps are causing pop-ups and slowing the phone, and remove them.</string>
+
+    <string name="cleanup_title">Which app is troubling your phone?</string>
+    <string name="cleanup_subtitle">Newest apps are at the top. Red ones are the most likely problem.</string>
+    <string name="cleanup_empty">No downloaded apps found. Your phone looks clean.</string>
+    <string name="cleanup_no_usage_access">Some checks are off. Ask your helper to finish setup in Swatter.</string>
+    <string name="remove">Remove</string>
+    <string name="close">Close</string>
+    <string name="installed_on">Installed %1$s</string>
+
+    <string name="badge_overlay">Shows pop-ups over other apps</string>
+    <string name="badge_recent">Was open in the last 15 minutes</string>
+    <string name="badge_space">Uses a lot of space</string>
+    <string name="badge_hidden">Hidden from home screen</string>
+
+    <string name="setup_title">Set up Swatter</string>
+    <string name="setup_intro">Do these steps once on the owner\'s phone. After that, the owner just holds both volume buttons for 3 seconds when pop-ups appear.</string>
+    <string name="setup_step_usage">1. Allow \"Usage access\" for Swatter, so it can tell which app was open when ads appeared.</string>
+    <string name="setup_step_usage_done">1. Usage access is on.</string>
+    <string name="setup_step_shortcut">2. Turn on the volume button shortcut: in Accessibility, open \"Swatter: fix my phone\" and switch on its shortcut. Choose \"Hold volume keys\" if asked.</string>
+    <string name="setup_step_shortcut_old">2. This phone is older than Android 11, so the volume shortcut is not available. Use the Swatter icon instead.</string>
+    <string name="setup_step_test">3. Test it: hold both volume buttons for 3 seconds, or tap below.</string>
+    <string name="open_usage_settings">Open Usage access</string>
+    <string name="open_accessibility_settings">Open Accessibility</string>
+    <string name="open_cleanup">Open the clean-up screen</string>
+</resources>
