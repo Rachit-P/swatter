@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cleanup_label">Swatter: फ़ोन ठीक करें</string>
+    <string name="shortcut_summary">पॉप-अप दिखाने वाले ऐप को ढूँढें और हटाएँ</string>
+    <string name="shortcut_description">दोनों वॉल्यूम बटन 3 सेकंड दबाकर रखें। आपको दिखेगा कि कौन से ऐप पॉप-अप दिखा रहे हैं और फ़ोन धीमा कर रहे हैं, और आप उन्हें हटा सकेंगे।</string>
+
+    <string name="cleanup_title">कौन सा ऐप आपके फ़ोन को परेशान कर रहा है?</string>
+    <string name="cleanup_subtitle">सबसे नए ऐप सबसे ऊपर हैं। लाल वाले सबसे ज़्यादा संभावित परेशानी हैं।</string>
+    <string name="cleanup_empty">कोई डाउनलोड किया हुआ ऐप नहीं मिला। आपका फ़ोन साफ़ लगता है।</string>
+    <string name="cleanup_no_usage_access">कुछ जाँच बंद हैं। अपने मददगार से Swatter का सेटअप पूरा करने को कहें।</string>
+    <string name="remove">हटाएँ</string>
+    <string name="close">बंद करें</string>
+    <string name="installed_on">%1$s को इंस्टॉल हुआ</string>
+
+    <string name="badge_overlay">दूसरे ऐप्स के ऊपर पॉप-अप दिखाता है</string>
+    <string name="badge_recent">पिछले 15 मिनट में खुला था</string>
+    <string name="badge_space">बहुत जगह लेता है</string>
+    <string name="badge_hidden">होम स्क्रीन पर नहीं दिखता</string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Swatter has to see every installed app to find the one causing pop-ups. -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <!-- Usage history (which app was on screen) and per-app storage. Granted once by the helper in Settings. -->
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- Lets the Remove button open the system uninstall dialog. -->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+
+        <!-- Setup screen, for the helper. -->
+        <activity
+            android:name=".SetupActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            The clean-up screen. Registered as an accessibility shortcut target (Android 11+), so the owner
+            opens it from anywhere by holding both volume buttons for 3 seconds once the shortcut is turned on.
+        -->
+        <activity
+            android:name=".CleanupActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="@string/cleanup_label"
+            android:launchMode="singleTask"
+            android:taskAffinity="io.github.rachitp.swatter.cleanup">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.ACCESSIBILITY_SHORTCUT_TARGET" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityshortcut.target"
+                android:resource="@xml/accessibility_shortcut" />
+        </activity>
+    </application>
+</manifest>
